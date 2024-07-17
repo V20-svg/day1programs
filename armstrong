@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+ 
+void main()
+{
+    int num, cod=0, sum=0,temp;
+    scanf("%d", &num);
+    temp = num;
+    int number = num;
+    while(num>0)  
+    {
+        num = num/10;                                   
+        cod++;      // count of digits n
+    }
+    while (temp>0)	  
+    {
+        sum=sum+ pow((temp%10), cod);
+        temp = temp / 10;
+    }
+    (sum == number)?printf ("Armstrong number"):printf ("Not an Armstrong number");
+}
