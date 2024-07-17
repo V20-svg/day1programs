@@ -1,0 +1,17 @@
+#include <stdio.h>
+int isPalindrome(int n,int rev)
+{
+    if (n==0)
+        return rev;
+    rev = rev * 10 + n % 10;
+    isPalindrome(n/10,rev);
+}
+
+int main()
+{
+    int num,res,rev=0;
+    scanf("%d",&num);
+    res = isPalindrome(num,rev); 
+    (res==num)?printf("Palindrome number"):printf("Not a palindrome number");
+    return 0;
+}
